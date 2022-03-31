@@ -1,0 +1,6 @@
+<!-- To show the 'list' of tasks. It goes with not capital letter bc it's declared in the TS file -->
+<app-tasks-item 
+    *ngFor="let task of tasks"
+    [task] = "task"
+>
+{{task.text}}</app-tasks-item>

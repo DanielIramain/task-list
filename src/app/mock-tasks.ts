@@ -10,13 +10,13 @@ export const TASK: Task[] = [
     {
         id: 2,
         text: 'Terminar modulo bases de datos',
-        day: '33 Abril 2022',
+        day: '30 Abril 2022',
         reminder: true
     },
     {
         id: 3,
         text: 'Terminar modulo back-end',
-        day: '30 Mayo 2022',
+        day: '31 Mayo 2022',
         reminder: false
     },
     {
