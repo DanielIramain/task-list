@@ -18,4 +18,15 @@ export class TasksComponent implements OnInit {
     ));
   }
 
+  deleteTask(task: Task) {
+    this.taskService.deleteTask(task)
+      .subscribe(()=>(
+        this.tasks = this.tasks.filter( t => {return t.id !== task.id}) /* return all of the elements except the one we delete */
+    ))
+  }
+
+  toggleReminder(task: Task) {
+    task.reminder = !task.reminder
+    this.taskService.updateTaskReminder(task).subscribe(); /*the logic is managed in the component, we pass the task updated to the service and this one saves it in the DB */
+  }
 }
