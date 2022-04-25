@@ -29,4 +29,10 @@ export class TasksComponent implements OnInit {
     task.reminder = !task.reminder
     this.taskService.updateTaskReminder(task).subscribe(); /*the logic is managed in the component, we pass the task updated to the service and this one saves it in the DB */
   }
+
+  addTask(task: Task) {
+    this.taskService.addTask(task).subscribe((task) => (
+      this.tasks.push(task)
+    ))
+  }
 }
