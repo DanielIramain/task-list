@@ -1,4 +1,7 @@
 <!-- To show the 'list' of tasks. It goes with not capital letter bc it's declared in the TS file -->
+<app-add-task
+    (onAddTask) = "addTask($event)"
+></app-add-task>
 <app-tasks-item 
     *ngFor="let task of tasks"
     [task] = "task"
